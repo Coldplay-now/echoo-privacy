@@ -69,6 +69,27 @@
             color: #6b5b56;
             padding: 4px 0;
         }
+        .download {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #db8f7b;
+            color: #fff !important;
+            border-radius: 24px;
+            text-decoration: none;
+            font-size: 15px;
+            margin-top: 12px;
+        }
+        .download-btn:hover { background: #c97f6b; }
+        .platforms { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; }
+        .platform { flex: 1; min-width: 200px; }
+        .platform-name { font-weight: 600; color: #403836; margin-bottom: 4px; }
+        .platform-detail { font-size: 13px; color: #9e8e88; }
         .contact {
             margin-top: 40px;
             padding: 24px;
@@ -89,6 +110,22 @@
     <div class="container">
         <h1>帮助与支持</h1>
         <div class="app-name">小回声 Echoo — Support</div>
+
+        <h2>下载</h2>
+        <div class="download">
+            <div class="platforms">
+                <div class="platform">
+                    <div class="platform-name">iOS</div>
+                    <div class="platform-detail">即将上架 App Store（审核中）</div>
+                </div>
+                <div class="platform">
+                    <div class="platform-name">Android</div>
+                    <div class="platform-detail">需 Android 8.0+，约 11 MB</div>
+                    <a href="echoo-v1.0.0.apk" class="download-btn">下载 APK v1.0.0</a>
+                </div>
+            </div>
+            <p style="margin-top:16px;font-size:13px;color:#9e8e88;">Android 首次安装可能需要在"设置 → 应用 → 安装未知来源"里临时允许浏览器/文件管理器安装。安装后 app 内"设置 → 检查更新"会自动检测新版本。</p>
+        </div>
 
         <h2>怎么用</h2>
         <p>打开 app 你会看到 4×5 的小格子。点击"抽一句"，格子开始翻转，最终拼出一个温柔的提问。再点"看看回声"，卡片合并成一张大卡，给你一段简短的阐释。</p>
