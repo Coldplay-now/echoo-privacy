@@ -1,6 +1,6 @@
 {
-  "versionCode": 4,
-  "versionName": "1.0.3",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.3.apk",
-  "notes": "1.0.3：换用与 iOS 一致的 app 图标；所有 450 张卡片问题加上标点（譬如「？」）；修整一批表达不清和重复词的卡片。"
+  "versionCode": 5,
+  "versionName": "1.0.4",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.4.apk",
+  "notes": "1.0.4：修复海绵手感坐标偏移；网络错误更准确（区分无网/超时和无 manifest）；内容加载失败时显示错误屏不再启动崩溃；兼容 Android 8-10 的涟漪渲染。"
 }
