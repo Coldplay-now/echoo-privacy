@@ -1,6 +1,6 @@
 {
-  "versionCode": 3,
-  "versionName": "1.0.2",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.2.apk",
-  "notes": "1.0.2：修复解释卡过大遮挡按钮；涟漪改为软光晕（之前像探照灯有硬边），释放后随惯性散开。"
+  "versionCode": 4,
+  "versionName": "1.0.3",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.3.apk",
+  "notes": "1.0.3：换用与 iOS 一致的 app 图标；所有 450 张卡片问题加上标点（譬如「？」）；修整一批表达不清和重复词的卡片。"
 }
