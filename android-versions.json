@@ -1,6 +1,6 @@
 {
-  "versionCode": 9,
-  "versionName": "1.1.1",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.1.apk",
-  "notes": "1.1.1：提问卡撤出动画对齐 iOS——每格往各自的随机方向漂出（之前是整块淡出，少了一点呼吸感）。"
+  "versionCode": 10,
+  "versionName": "1.1.2",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.2.apk",
+  "notes": "1.1.2：点击「再抽一句」回到初始页时，格子卡片从散落位置呼吸式地飞回原位，不再是硬切换。"
 }
