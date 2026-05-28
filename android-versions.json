@@ -1,6 +1,6 @@
 {
-  "versionCode": 6,
-  "versionName": "1.0.5",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.5.apk",
-  "notes": "1.0.5：修字体——之前 LXGW 文楷子集生成时漏掉了 82 个字（包括「愤怒、举、叛、抹、撞」等），导致这些字在 app 里 fallback 到系统字体看起来不一致。重新生成 subset 覆盖全部 1175 个用到的字符。"
+  "versionCode": 7,
+  "versionName": "1.0.6",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.6.apk",
+  "notes": "1.0.6：解释卡正文字号缩小一档（22→20），与标题层次更清晰。"
 }
