@@ -1,6 +1,6 @@
 {
-  "versionCode": 17,
-  "versionName": "1.1.9",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.9.apk",
-  "notes": "1.1.9：182 张薄解释（原 16-20 字）按「全程问句开头、多 shade 并列、邀请内心连接」格式加厚到 40-80 字。≤20 字残留 0 张。"
+  "versionCode": 18,
+  "versionName": "1.2.0",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.2.0.apk",
+  "notes": "1.2.0：192 张解释里的「——」长破折号统一换成逗号（解释卡按逗号自动换行，节奏更轻）。"
 }
