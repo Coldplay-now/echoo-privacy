@@ -1,6 +1,6 @@
 {
-  "versionCode": 12,
-  "versionName": "1.1.4",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.4.apk",
-  "notes": "1.1.4：收藏页分类筛选改成折叠下拉菜单（不再横向滑），列表正文左对齐。"
+  "versionCode": 13,
+  "versionName": "1.1.5",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.5.apk",
+  "notes": "1.1.5：打开应用自动检查更新——发现新版本时弹窗提醒；点「以后再说」后同版本 24h 内不再提醒。"
 }
