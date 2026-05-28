@@ -1,6 +1,6 @@
 {
-  "versionCode": 15,
-  "versionName": "1.1.7",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.7.apk",
-  "notes": "1.1.7：12 张卡进一步打磨——「你最X的一部分」改成「此刻你最X的」更通顺；模糊隐喻（火苗/影子）换成具体场景；问 facts 的卡改成问内在感受；薄解释加厚。"
+  "versionCode": 16,
+  "versionName": "1.1.8",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.8.apk",
+  "notes": "1.1.8：27 张最薄的解释（原来 ≤15 字）扩到 41-60 字，加上多 shade 感受问 + 留白尾句。"
 }
