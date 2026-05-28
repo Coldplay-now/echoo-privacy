@@ -1,6 +1,6 @@
 {
-  "versionCode": 5,
-  "versionName": "1.0.4",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.4.apk",
-  "notes": "1.0.4：修复海绵手感坐标偏移；网络错误更准确（区分无网/超时和无 manifest）；内容加载失败时显示错误屏不再启动崩溃；兼容 Android 8-10 的涟漪渲染。"
+  "versionCode": 6,
+  "versionName": "1.0.5",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.5.apk",
+  "notes": "1.0.5：修字体——之前 LXGW 文楷子集生成时漏掉了 82 个字（包括「愤怒、举、叛、抹、撞」等），导致这些字在 app 里 fallback 到系统字体看起来不一致。重新生成 subset 覆盖全部 1175 个用到的字符。"
 }
