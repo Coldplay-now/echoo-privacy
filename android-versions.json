@@ -1,6 +1,6 @@
 {
-  "versionCode": 18,
-  "versionName": "1.2.0",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.2.0.apk",
-  "notes": "1.2.0：192 张解释里的「——」长破折号统一换成逗号（解释卡按逗号自动换行，节奏更轻）。"
+  "versionCode": 19,
+  "versionName": "1.2.1",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.2.1.apk",
+  "notes": "1.2.1：每次启动会有一个 3 秒的开屏页——「小回声 · 与自己仿若初见」，呼吸般淡入淡出。"
 }
