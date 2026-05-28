@@ -1,6 +1,6 @@
 {
-  "versionCode": 7,
-  "versionName": "1.0.6",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.0.6.apk",
-  "notes": "1.0.6：解释卡正文字号缩小一档（22→20），与标题层次更清晰。"
+  "versionCode": 8,
+  "versionName": "1.1.0",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.0.apk",
+  "notes": "1.1.0：卡片从 450 张扩到 950 张，新增 5 个分类（工作与意义/身体与感受/童年与原生/金钱与匮乏/改变与停滞）。所有问题改为开放式，解释偏向觉察与感受。设置 + 解释卡新增手势返回。问题→解释的过场动画放慢到呼吸节奏。"
 }
