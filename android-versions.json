@@ -1,6 +1,6 @@
 {
-  "versionCode": 13,
-  "versionName": "1.1.5",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.5.apk",
-  "notes": "1.1.5：打开应用自动检查更新——发现新版本时弹窗提醒；点「以后再说」后同版本 24h 内不再提醒。"
+  "versionCode": 14,
+  "versionName": "1.1.6",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.1.6.apk",
+  "notes": "1.1.6：内容打磨——50 张卡的问与答重新校准。修了 Q/I 错位、是非题（含「有没有/是不是」隐式构型）、残留引导词、「定义身份+指令」的卡。整体风格更贴近觉察。"
 }
