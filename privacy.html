@@ -70,7 +70,12 @@
         </ul>
 
         <h2>数据存储</h2>
-        <p>你的收藏记录、抽卡历史以及新手引导状态仅存储在你的设备本地（iOS UserDefaults），不会上传到任何服务器。卸载应用将永久删除这些数据。</p>
+        <p>你的收藏记录、抽卡历史、新手引导状态仅存储在你的设备本地：</p>
+        <ul>
+            <li>iOS：UserDefaults（key <code>Echoo.PersistedAppState.v1</code>）</li>
+            <li>Android：SharedPreferences</li>
+        </ul>
+        <p>不会上传到任何服务器。卸载应用将永久删除这些数据。</p>
 
         <h2>分享功能</h2>
         <p>当你点击解释卡片的分享按钮时，小回声会在你的设备上即时生成一张图片，然后通过系统标准的分享面板交给你选择的目标 app（如微信、相册、邮件等）。整个生成过程完全在本地完成，图片不会经过我们的任何服务器。</p>
@@ -79,7 +84,15 @@
         <p>小回声不集成任何第三方 SDK、分析工具、广告框架或社交登录服务。</p>
 
         <h2>网络访问</h2>
-        <p>小回声不需要网络连接即可正常使用。应用不会发起任何网络请求。</p>
+        <p><strong>iOS 端</strong>：完全离线，不发起任何网络请求。</p>
+        <p><strong>Android 端</strong>：因为不通过 Google Play 分发，需要 app 内自检版本。具体行为：</p>
+        <ul>
+            <li>每次冷启动后台静默拉取一次 <a href="https://coldplay-now.github.io/echoo-privacy/android-versions.json">android-versions.json</a>（GitHub Pages 静态文件，约 200 字节），仅用于比较版本号。</li>
+            <li>请求里不包含任何设备标识、用户标识或埋点参数。</li>
+            <li>若有新版本，弹窗提示你手动点"去下载"，下载链接打开手机系统浏览器。我们不会自动下载任何东西。</li>
+            <li>如果你点"以后再说"，会在 SharedPreferences 里记录该版本号 + 时间戳，24 小时内不再弹同一版本。</li>
+            <li>检查失败（断网、超时）会静默忽略，不影响 app 正常使用。</li>
+        </ul>
 
         <h2>儿童隐私</h2>
         <p>小回声不针对 13 岁以下儿童，也不会有意收集未成年人的个人信息。</p>
@@ -90,7 +103,7 @@
         <h2>联系方式</h2>
         <p>如有任何关于隐私政策的问题，请通过邮件联系我们：<a href="mailto:okok.galagala@gmail.com">okok.galagala@gmail.com</a></p>
 
-        <div class="updated">最后更新：2026 年 5 月 27 日</div>
+        <div class="updated">最后更新：2026 年 5 月 29 日</div>
     </div>
 </body>
 </html>
