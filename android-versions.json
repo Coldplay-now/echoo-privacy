@@ -1,6 +1,6 @@
 {
-  "versionCode": 19,
-  "versionName": "1.2.1",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.2.1.apk",
-  "notes": "1.2.1：每次启动会有一个 3 秒的开屏页——「小回声 · 与自己仿若初见」，呼吸般淡入淡出。"
+  "versionCode": 20,
+  "versionName": "1.2.2",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.2.2.apk",
+  "notes": "1.2.2：「收藏」入口更显眼（首页右上角带文字标识）；解释卡内容自适应高度，长内容不再被裁切。"
 }
