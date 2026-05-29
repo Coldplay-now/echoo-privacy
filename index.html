@@ -3,86 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小回声 Echoo</title>
+    <title>小回声 Echoo — 一个照见自己的 app</title>
+    <meta name="description" content="小回声 Echoo 是一个很轻的情绪整理仪式。抽一张卡，读一个温柔的提问和它的阐释，让一句话帮你看清此刻的感受。950 张卡片 · 14 个情绪主题 · 完全离线 · 不收集任何数据。">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", sans-serif;
             background: #f7f2ee;
             color: #403836;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            line-height: 1.8;
         }
         .container {
-            max-width: 480px;
-            padding: 56px 32px;
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 64px 28px 48px;
             text-align: center;
         }
         .title {
-            font-size: 34px;
+            font-size: 38px;
             font-weight: 600;
             color: #945c50;
             margin-bottom: 6px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
         .subtitle {
             font-size: 13px;
             color: #9e8e88;
-            margin-bottom: 36px;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+        }
+        .breath {
+            font-size: 14px;
+            color: #b9a89f;
+            margin-bottom: 44px;
             letter-spacing: 1px;
         }
         .desc {
-            font-size: 16px;
-            line-height: 1.9;
+            font-size: 17px;
+            line-height: 2;
             color: #6b5b56;
-            margin-bottom: 32px;
+            margin-bottom: 36px;
         }
-        .tagline {
-            font-size: 14px;
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 44px;
+            flex-wrap: wrap;
+        }
+        .stat { text-align: center; }
+        .stat-num {
+            font-size: 26px;
+            font-weight: 600;
+            color: #db8f7b;
+            display: block;
+        }
+        .stat-label {
+            font-size: 13px;
             color: #9e8e88;
-            margin-bottom: 40px;
-            line-height: 1.8;
         }
-        .tagline span {
-            display: inline-block;
-            margin: 0 4px;
+        .downloads {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 320px;
+            margin: 0 auto 24px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 15px;
+            border-radius: 28px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+        .btn-ios {
+            background: #db8f7b;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(219,143,123,0.35);
+        }
+        .btn-ios:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(219,143,123,0.45); }
+        .btn-android {
+            background: #fff;
+            color: #945c50;
+            border: 1px solid #e8ddd7;
+        }
+        .btn-android:hover { background: #fbf6f2; transform: translateY(-1px); }
+        .android-hint {
+            font-size: 12px;
+            color: #b9a89f;
+            margin-bottom: 48px;
+        }
+        .features {
+            text-align: left;
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 28px 24px;
+            margin-bottom: 40px;
+        }
+        .features h2 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #945c50;
+            margin-bottom: 16px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .features ul { list-style: none; }
+        .features li {
+            font-size: 14px;
+            color: #6b5b56;
+            padding: 7px 0;
+            padding-left: 22px;
+            position: relative;
+        }
+        .features li::before {
+            content: "·";
+            position: absolute;
+            left: 8px;
+            color: #db8f7b;
+            font-weight: 600;
         }
         .links {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
+            justify-content: center;
+            gap: 20px;
+            font-size: 14px;
         }
-        .links a {
-            display: block;
-            padding: 14px;
-            border-radius: 12px;
-            background: #fff;
-            color: #945c50;
-            text-decoration: none;
-            font-size: 15px;
-            transition: background 0.2s;
+        .links a { color: #945c50; text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #b9a89f;
         }
-        .links a:hover { background: #f0e6e0; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="title">小回声</div>
         <div class="subtitle">Echoo</div>
+        <div class="breath">与自己仿若初见</div>
+
         <p class="desc">
             一个很轻的情绪整理仪式。<br>
             不给答案，只帮你把模糊的感觉说清楚。
         </p>
-        <p class="tagline">
-            450 张温柔的提问 · 9 个情绪主题<br>
-            完全离线 · 不收集任何数据
-        </p>
-        <div class="links">
-            <a href="privacy.html">隐私政策 Privacy Policy</a>
-            <a href="support.html">帮助与支持 Support</a>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-num">950</span>
+                <span class="stat-label">张温柔的提问</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">14</span>
+                <span class="stat-label">个情绪主题</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">0</span>
+                <span class="stat-label">数据收集</span>
+            </div>
         </div>
+
+        <div class="downloads">
+            <a href="https://apps.apple.com/cn/app/id6773560287" class="btn btn-ios">App Store 下载（iOS）</a>
+            <a href="echoo-v1.2.2.apk" class="btn btn-android">下载 Android APK</a>
+        </div>
+        <p class="android-hint">iOS 17+ · Android 8.0+ · 约 11 MB</p>
+
+        <div class="features">
+            <h2>它是怎么工作的</h2>
+            <ul>
+                <li>打开是 4×5 的小格子，点「抽一句」格子翻转，拼出一个温柔的提问</li>
+                <li>再点「看看回声」，卡片合并成一张大卡，给你一段简短的阐释</li>
+                <li>触动你的句子可以收藏，也可以渲染成精美图片分享给朋友</li>
+                <li>完全离线运行，不需要注册，不收集任何数据</li>
+                <li>支持深色模式，自动跟随系统</li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <a href="privacy.html">隐私政策</a>
+            <a href="support.html">帮助与支持</a>
+            <a href="mailto:okok.galagala@gmail.com">联系我们</a>
+        </div>
+
+        <div class="footer">© 2026 小回声 Echoo</div>
     </div>
 </body>
 </html>
