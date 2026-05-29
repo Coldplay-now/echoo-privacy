@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小回声 Echoo — 一个照见自己的 app</title>
     <meta name="description" content="小回声 Echoo 是一个很轻的情绪整理仪式。抽一张卡，读一个温柔的提问和它的阐释，让一句话帮你看清此刻的感受。950 张卡片 · 14 个情绪主题 · 完全离线 · 不收集任何数据。">
+    <!-- Open Graph：微信/社交分享卡片显示标题与描述 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="小回声 Echoo — 一个照见自己的 app">
+    <meta property="og:description" content="一个很轻的情绪整理仪式。抽一张卡，读一个温柔的提问和它的阐释，让一句话帮你看清此刻的感受。950 张卡片 · 14 个情绪主题 · 完全离线。">
+    <meta property="og:url" content="https://coldplay-now.github.io/echoo-privacy/">
+    <meta property="og:site_name" content="小回声 Echoo">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -92,6 +98,16 @@
             border: 1px solid #e8ddd7;
         }
         .btn-android:hover { background: #fbf6f2; transform: translateY(-1px); }
+        .btn.secondary {
+            background: transparent;
+            color: #9e8e88;
+            box-shadow: none;
+            border: none;
+            font-size: 14px;
+            padding: 6px;
+            text-decoration: underline;
+        }
+        .btn.secondary:hover { background: transparent; transform: none; }
         .android-hint {
             font-size: 12px;
             color: #b9a89f;
@@ -168,11 +184,11 @@
             </div>
         </div>
 
-        <div class="downloads">
-            <a href="https://apps.apple.com/cn/app/id6773560287" class="btn btn-ios">App Store 下载（iOS）</a>
-            <a href="echoo-v1.2.2.apk" class="btn btn-android">下载 Android APK</a>
+        <div class="downloads" id="downloads">
+            <a id="dl-ios" href="https://apps.apple.com/cn/app/id6773560287" class="btn btn-ios">App Store 下载（iOS）</a>
+            <a id="dl-android" href="echoo-v1.2.2.apk" class="btn btn-android">下载 Android APK</a>
         </div>
-        <p class="android-hint">iOS 17+ · Android 8.0+ · 约 11 MB</p>
+        <p class="android-hint" id="dl-hint">iOS 17+ · Android 8.0+ · 约 11 MB</p>
 
         <div class="features">
             <h2>它是怎么工作的</h2>
@@ -193,5 +209,34 @@
 
         <div class="footer">© 2026 小回声 Echoo</div>
     </div>
+
+    <script>
+    // 按设备类型分流：
+    //  · iOS 访客（如从微信卡片点开）→ 自动唤起 App Store，落地页大按钮作为兜底
+    //  · Android 访客 → 突出 APK 下载按钮（不自动下载，避免误触）
+    //  · 桌面/其他 → 两个入口都正常显示
+    (function () {
+        var ua = navigator.userAgent || "";
+        var isIOS = (/iPhone|iPad|iPod/.test(ua)) && !window.MSStream;
+        var isAndroid = /Android/.test(ua);
+        var ios = document.getElementById('dl-ios');
+        var android = document.getElementById('dl-android');
+        var box = document.getElementById('downloads');
+        var hint = document.getElementById('dl-hint');
+        if (!ios || !android || !box) return;
+        if (isIOS) {
+            android.classList.add('secondary');
+            android.textContent = '或下载 Android 版';
+            box.insertBefore(ios, android);
+            if (hint) hint.textContent = '正在前往 App Store…若未自动跳转，请点上方按钮';
+            // 先让页面渲染一瞬，再唤起 App Store（微信内置浏览器也能识别）
+            setTimeout(function () { window.location.href = ios.href; }, 700);
+        } else if (isAndroid) {
+            ios.classList.add('secondary');
+            ios.textContent = '或前往 App Store（iOS）';
+            box.insertBefore(android, ios);
+        }
+    })();
+    </script>
 </body>
 </html>
