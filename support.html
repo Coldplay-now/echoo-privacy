@@ -104,12 +104,57 @@
             padding-top: 20px;
             border-top: 1px solid #e8ddd7;
         }
+        .intro {
+            font-size: 16px;
+            color: #6b5b56;
+            line-height: 1.9;
+            margin-bottom: 28px;
+        }
+        .screenshots {
+            display: flex;
+            gap: 14px;
+            overflow-x: auto;
+            padding: 4px 24px 18px;
+            margin: 0 -24px 8px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .screenshots::-webkit-scrollbar { display: none; }
+        .shot {
+            flex: 0 0 auto;
+            width: 210px;
+            border-radius: 20px;
+            box-shadow: 0 8px 28px rgba(64,56,54,0.14);
+        }
+        .shot-cap {
+            font-size: 12px;
+            color: #9e8e88;
+            text-align: center;
+            margin-top: 8px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>帮助与支持</h1>
         <div class="app-name">小回声 Echoo — Support</div>
+
+        <p class="intro">小回声是一个很轻的情绪整理仪式。打开它，抽一张卡，读一个温柔的提问和它的阐释——不给答案，只帮你把模糊的感觉说清楚。950 张原创卡片，14 个情绪主题，完全离线运行，不收集任何数据。</p>
+
+        <h2>界面预览</h2>
+        <div class="screenshots">
+            <div>
+                <img class="shot" src="screenshots/02_idle.png" alt="主屏 4×5 宫格" loading="lazy">
+                <div class="shot-cap">4×5 宫格，点「抽一句」</div>
+            </div>
+            <div>
+                <img class="shot" src="screenshots/03_revealed.png" alt="翻牌揭晓提问" loading="lazy">
+                <div class="shot-cap">格子翻转，拼出提问</div>
+            </div>
+            <div>
+                <img class="shot" src="screenshots/04_interpretation.png" alt="解释卡" loading="lazy">
+                <div class="shot-cap">看看回声，读它的阐释</div>
+            </div>
+        </div>
 
         <h2>下载</h2>
         <div class="download">
@@ -188,7 +233,7 @@
             <p><a href="mailto:okok.galagala@gmail.com">okok.galagala@gmail.com</a></p>
         </div>
 
-        <div class="updated">最后更新：2026 年 5 月 29 日</div>
+        <div class="updated">最后更新：2026 年 5 月 30 日</div>
     </div>
 </body>
 </html>
