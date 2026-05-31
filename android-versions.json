@@ -1,6 +1,6 @@
 {
-  "versionCode": 20,
-  "versionName": "1.2.2",
-  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.2.2.apk",
-  "notes": "1.2.2：「收藏」入口更显眼（首页右上角带文字标识）；解释卡内容自适应高度，长内容不再被裁切。"
+  "versionCode": 21,
+  "versionName": "1.2.3",
+  "apkUrl": "https://coldplay-now.github.io/echoo-privacy/echoo-v1.2.3.apk",
+  "notes": "1.2.3：修复部分机型（如小米 Civi3）解释卡页面「再抽一句」按钮不显示的问题。"
 }
